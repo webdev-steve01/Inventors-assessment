@@ -105,19 +105,20 @@ function Main() {
         </div>
       </div>
       <section className="flex flex-wrap gap-4 container mx-auto ">
-        {sliced
-          .filter((country) =>
-            country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-          .map((country, i) => (
-            <Card key={i} country={country} />
-          ))}
+        {filtered.length > 0 &&
+          filtered
+            .filter((country) =>
+              country.name.common
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase())
+            )
+            .map((country, i) => <Card key={i} country={country} />)}
       </section>
       <section
         onClick={() => setMore(more + 20)}
         className="flex justify-center mt-4 cursor-pointer text-black text-[1.2em] font-semibold"
       >
-        <p>Load More</p>
+        {/* <p>Load More</p> */}
       </section>
     </div>
   );
