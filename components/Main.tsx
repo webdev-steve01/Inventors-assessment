@@ -18,7 +18,7 @@ const fetchCountries = async () => {
 
 function Main() {
   const [countries, setCountries] = useState<Country[]>([]);
-  const [sliced, setSliced] = useState<Country[]>([]);
+  // const [sliced, setSliced] = useState<Country[]>([]);
   const [filtered, setFiltered] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [region, setRegion] = useState("All");
@@ -48,12 +48,6 @@ function Main() {
 
     loadData();
   }, []);
-
-  useEffect(() => {
-    if (filtered.length > 0) {
-      setSliced(filtered.slice(0, more));
-    }
-  }, [filtered, more]);
 
   if (loading || countries.length === 0) {
     return (
