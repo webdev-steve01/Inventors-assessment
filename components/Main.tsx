@@ -4,7 +4,7 @@ import type { Country } from "@/interfaces/CountriesInterface";
 import RegionDropdown from "./RegionDropdown";
 import Card from "./Card";
 
-const skeleton = 10;
+// const skeleton = 10;
 
 const fetchCountries = async () => {
   const res = await fetch(
