@@ -55,16 +55,34 @@ function Main() {
     }
   }, [filtered, more]);
 
-  if (loading) {
+  if (loading || countries.length === 0) {
     return (
       <div className="flex p-4 justify-center items-center h-screen">
-        <div className="flex flex-col gap-4">
-          {Array.from({ length: skeleton }).map((_, i) => (
-            <div
-              key={i}
-              className="bg-gray-300 h-16 w-full max-w-md rounded"
-            ></div>
-          ))}
+        <div className="boxes">
+          <div className="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div className="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div className="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div className="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     );
