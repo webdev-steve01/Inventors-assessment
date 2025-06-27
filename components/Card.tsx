@@ -1,6 +1,5 @@
 import React from "react";
 import type { Country } from "@/interfaces/CountriesInterface";
-import Image from "next/image";
 
 function Card({ country }: { country: Country }) {
   return (
